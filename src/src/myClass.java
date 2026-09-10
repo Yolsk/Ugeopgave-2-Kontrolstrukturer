@@ -54,7 +54,22 @@ void main() {
     boolean hasAccidents = false;
     int accidents = 0;
     boolean riskZone = false;
-    int premium;
+    int premiumPrice;
+
+    if (age < 25 || age > 70 || (hasAccidents && accidents > 2) || riskZone) {
+        premiumPrice = basicPrice + 2000;
+        System.out.println("Gets Premium Price");
+    } else {
+        premiumPrice = basicPrice;
+        System.out.println("Gets Standard Price");
+    }
+
+    System.out.println("Premium price: " + premiumPrice);
+
+
+    ///////////////////////////////
+
+
 
     // opgave 10 Switch-case
     double price;
@@ -84,6 +99,8 @@ void main() {
     double total = price * quantity;
     System.out.println("Total: " + total + " kr");
 
+    ///////////////////////////////////
+
 
     //opgave 15 While Loops
     double savings = 0;
@@ -97,8 +114,10 @@ void main() {
     }
     System.out.println("It takes " + months + " months to reach goal!");
 
+    ///////////////////////////////////////////
 
-    // opgave For Loops
+
+    // opgave 22 For Loops
     for (int i = 1; i <= 30; i++) {
         if (i % 3 == 0) {
             System.out.println("Fizz");
@@ -111,9 +130,8 @@ void main() {
 
         }
 
-
-
     }
+    ////////////////////////////////////
 
     // opgave 20: Savings calculator
 
@@ -124,10 +142,9 @@ void main() {
         totalSavings+= monthlySavings;
         System.out.println(totalSavings);
 
-
     }
 
-     */
+
 
     // opgave 25 For loops med array
     int[] temperatures = {18, 22, 20, 25, 19, 21, 23};
@@ -159,11 +176,9 @@ void main() {
     System.out.println("Coldest day: " + coldestDay);
     System.out.println("Days over 20: " + daysOver20);
 
+     */
 
+    /////////////////////////
 
-
-
-
-
-    }
+}
 }
